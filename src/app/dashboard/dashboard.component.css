@@ -1,0 +1,219 @@
+/* Dashboard Container */
+.dashboard {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #333;
+  position: relative;  /* Enable positioning of emergency stop button */
+}
+
+/* Ticket Info - Side by Side */
+.ticket-info {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.info-box {
+  width: 45%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-box h3 {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* Input Sections */
+.input-section {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Rounded Input Fields */
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+}
+
+/* Slider Styling */
+.slider {
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: #ddd;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.slider:hover {
+  background-color: #ccc;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #0056b3;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  background-color: #007bff;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #0056b3;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slider::-moz-range-thumb:hover {
+  background-color: #007bff;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Emergency Stop Button */
+.emergency-stop {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 20px 25px;
+  font-size: 20px;
+  color: white;
+  background-color: #ff4d4f;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 6px 12px rgba(255, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.1s ease, background-color 0.3s ease;
+}
+
+.emergency-stop:hover {
+  background-color: #ff1a1a;
+}
+
+.emergency-stop:active {
+  transform: scale(0.9);  /* Pressing effect */
+}
+
+/* Message Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  text-align: center;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #333;
+}
+/* Emergency Stop Button */
+.emergency-stop {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  font-size: 16px;
+  color: white;
+  background-color: #ff4d4f;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.5);
+  cursor: pointer;
+  transition: transform 0.1s ease, background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emergency-stop:hover {
+  background-color: #ff1a1a;
+}
+
+.emergency-stop:active {
+  transform: scale(0.85);  /* Pressing effect */
+}
+/* Add styling for the chart container */
+.chart-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.ticket-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.info-box {
+  width: 45%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

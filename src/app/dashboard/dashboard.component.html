@@ -1,0 +1,62 @@
+<div class="dashboard">
+  <h1>Ticketing System Dashboard</h1>
+
+  <!-- Available Tickets and Tickets Sold  -->
+  <div class="ticket-info">
+    <section class="info-box">
+      <h3>Available Tickets</h3>
+      <p>{{ availableTickets }}</p>
+    </section>
+
+    <section class="info-box">
+      <h3>Tickets Sold</h3>
+      <p>{{ ticketsSold }}</p>
+    </section>
+  </div>
+ 
+  <!-- Start Vendor Section -->
+  <section class="input-section">
+    <h3>Start Vendor</h3>
+    <label>Vendor ID:</label>
+    <input type="number" [(ngModel)]="vendorId" placeholder="Enter Vendor ID" />
+    <label>Ticket Release Rate (ms):</label>
+    <input type="range" [(ngModel)]="ticketReleaseRate" min="0" max="10000" class="slider" />
+    <span>{{ ticketReleaseRate }} ms</span>
+    <button (click)="startVendor()">Start Vendor</button>
+  </section>
+
+  <!-- Start Customer Section -->
+  <section class="input-section">
+    <h3>Start Customer</h3>
+    <label>Customer ID:</label>
+    <input type="number" [(ngModel)]="customerId" placeholder="Enter Customer ID" />
+    <label>Customer Retrieval Rate (ms):</label>
+    <input type="range" [(ngModel)]="customerRetrievalRate" min="0" max="10000" class="slider" />
+    <span>{{ customerRetrievalRate }} ms</span>
+    <button (click)="startCustomer()">Start Customer</button>
+  </section>
+
+  <!-- Set Maximum Capacity Section -->
+  <div>
+    <h3>Set Maximum Tickets</h3>
+    <label>Total Event Tickets:</label>
+    <input type="number" [(ngModel)]="maxEventTickets">
+    <button (click)="setMaxEventTickets()">Set Event Tickets</button>
+  
+    <label>Max Pool Tickets:</label>
+    <input type="number" [(ngModel)]="maxPoolTickets">
+    <button (click)="setMaxPoolTickets()">Set Pool Tickets</button>
+  </div>
+  
+
+  <!-- Emergency Stop Button -->
+  <button class="emergency-stop" (click)="stopAll()">Stop</button>
+
+  <!-- Message Modal for Notifications -->
+  <div *ngIf="message" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" (click)="message = ''">&times;</span>
+      <p>{{ message }}</p>
+    </div>
+  </div>
+</div>
